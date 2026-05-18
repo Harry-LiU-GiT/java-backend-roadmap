@@ -46,3 +46,31 @@
 - Move Zeroes 使用 `insertPos` 记录下一个非零元素应该放置的位置
 - 链表节点由 `val` 和 `next` 组成，dummy 节点可以简化头节点处理
 - HashMap 解 Two Sum 可以用空间换时间，把复杂度从 `O(n²)` 降到 `O(n)`
+
+## Day 3 - 面向对象基础
+
+### 今日完成
+- 创建 `User` 实体类，练习 `private` 属性、构造器、getter/setter
+- 创建 `Order` 实体类，练习订单字段建模
+- 创建 `Task` 实体类，练习 `boolean` 属性和 `isCompleted()`
+- 使用 `Day3OopDemo` 测试对象创建和属性访问
+- 完成 Reverse Linked List
+- 完成 Linked List Cycle
+
+### 代码文件
+- `User.java`：用户实体类
+- `Order.java`：订单实体类
+- `Task.java`：任务实体类
+- `Day3OopDemo.java`：面向对象练习入口
+- `ReverseList.java`：反转链表
+- `LinkedListCycle.java`：环形链表
+
+### 今日复盘
+- 类是对象的模板，对象是类创建出来的具体实例
+- 属性用于保存对象的数据，也叫字段或成员变量
+- 构造器用于创建对象时初始化属性，名字必须和类名一致
+- 封装：把对象的属性隐藏起来，通过 `public` 方法提供受控访问
+- 继承：子类复用父类已有的属性和方法，并且可以扩展自己的能力
+- 多态：父类引用可以指向不同子类对象，同一个方法调用在不同对象上表现不同
+- 反转链表的关键是保存 `next`、反转 `current.next`、移动 `prev/current`
+- 环形链表使用快慢指针，`fast` 和 `slow` 相遇说明存在环
