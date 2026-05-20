@@ -74,3 +74,30 @@
 - 多态：父类引用可以指向不同子类对象，同一个方法调用在不同对象上表现不同
 - 反转链表的关键是保存 `next`、反转 `current.next`、移动 `prev/current`
 - 环形链表使用快慢指针，`fast` 和 `slow` 相遇说明存在环
+
+## Day 4 - 集合框架入门
+
+### 今日完成
+- 练习 `ArrayList` 的 `add`、`get`、`set`、`remove`、`size`
+- 练习 `HashMap` 的 `put`、`get`、`containsKey`
+- 练习 `HashSet` 的 `add`、`contains`、去重特性
+- 练习 `LinkedList` 的 `add`、`getFirst`、`removeFirst`
+- 完成 Group Anagrams
+- 完成 Longest Consecutive Sequence
+- 实现命令行 TodoList v0.1 的添加、删除、查询
+
+### 代码文件
+- `Day4CollectionsDemo.java`：集合基础练习
+- `GroupAnagrams.java`：字母异位词分组
+- `LongestConsecutive.java`：最长连续序列
+- `TodoListApp.java`：命令行 TodoList v0.1
+
+### 今日复盘
+- `ArrayList` 底层是动态数组，适合按下标快速访问
+- `LinkedList` 底层是双向链表，适合在已知节点位置时插入和删除
+- `HashMap` 用 key-value 存储数据，适合按 key 快速查找
+- `HashSet` 只保存不重复元素，适合去重和快速判断是否存在
+- Group Anagrams 使用排序后的字符串作为 key，把同类单词放进同一个列表
+- Longest Consecutive 使用 `HashSet` 快速判断数字是否存在，只从序列起点开始计数
+- TodoList v0.1 使用 `ArrayList<String>` 保存任务，注意用户编号和数组下标相差 1
+
