@@ -101,3 +101,32 @@
 - Longest Consecutive 使用 `HashSet` 快速判断数字是否存在，只从序列起点开始计数
 - TodoList v0.1 使用 `ArrayList<String>` 保存任务，注意用户编号和数组下标相差 1
 
+## Day 5 - 异常、泛型与简单 IO
+
+### 今日完成
+- 练习 `try/catch/finally` 捕获除零异常
+- 创建自定义异常 `InvalidTaskException`
+- 练习泛型方法 `printArray(T[] array)`
+- 使用 `Files.writeString` 和 `Files.readString` 完成简单文件读写
+- 实现 TodoList v0.2 文件持久化
+- 完成 Longest Substring Without Repeating Characters
+- 完成 Valid Anagram
+
+### 代码文件
+- `Day5ExceptionDemo.java`：异常处理练习
+- `InvalidTaskException.java`：自定义任务异常
+- `Day5GenericDemo.java`：泛型方法练习
+- `Day5FileDemo.java`：简单文件读写练习
+- `TodoListFileApp.java`：TodoList v0.2 文件持久化
+- `LongestSubstringWithoutRepeating.java`：最长无重复子串
+- `ValidAnagram.java`：有效的字母异位词
+
+### 今日复盘
+- `try/catch` 可以捕获异常，避免程序直接崩溃
+- `finally` 不管是否发生异常都会执行，常用于释放资源
+- 自定义异常可以表达业务错误，比如任务标题不能为空
+- 泛型方法通过 `<T>` 让同一个方法支持多种类型
+- `String` 不可变，滑动窗口中用 `HashSet<Character>` 维护当前窗口字符
+- 文件持久化就是把内存中的任务写入文件，下次再从文件读回
+- Valid Anagram 可以通过排序后比较两个字符数组解决
+
