@@ -1,5 +1,11 @@
 # Java Backend Roadmap
 
+## Repository Structure
+
+- `src/`：Java 基础语法、工具类、实体类和小项目练习
+- `leetcode/java/`：Java 算法题解
+- `project-notes/`：求职目标、简历草稿和项目笔记
+
 ## Day 1 - 环境与 Java 基础
 
 ### 今日完成
@@ -11,9 +17,9 @@
 - 完成 Valid Parentheses 栈解法
 
 ### 代码文件
-- `Main.java`：Java 基础语法练习
-- `TwoSum.java`：两数之和
-- `ValidParentheses.java`：有效的括号
+- `src/Main.java`：Java 基础语法练习
+- `leetcode/java/TwoSum.java`：两数之和
+- `leetcode/java/ValidParentheses.java`：有效的括号
 
 ### 今日复盘
 - Java 程序从 `public static void main(String[] args)` 开始执行
@@ -33,11 +39,11 @@
 - 复盘 HashMap 解 Two Sum 的思路
 
 ### 代码文件
-- `Day2Basics.java`：数组、字符串和 `StringBuilder` 基础练习
-- `ArrayUtils.java`：数组工具方法
-- `StringUtils.java`：字符串工具方法
-- `MoveZeroes.java`：移动零
-- `MergeTwoLists.java`：合并两个有序链表
+- `src/Day2Basics.java`：数组、字符串和 `StringBuilder` 基础练习
+- `src/ArrayUtils.java`：数组工具方法
+- `src/StringUtils.java`：字符串工具方法
+- `leetcode/java/MoveZeroes.java`：移动零
+- `leetcode/java/MergeTwoLists.java`：合并两个有序链表
 
 ### 今日复盘
 - 数组通过下标访问，`nums.length` 表示数组长度
@@ -58,12 +64,12 @@
 - 完成 Linked List Cycle
 
 ### 代码文件
-- `User.java`：用户实体类
-- `Order.java`：订单实体类
-- `Task.java`：任务实体类
-- `Day3OopDemo.java`：面向对象练习入口
-- `ReverseList.java`：反转链表
-- `LinkedListCycle.java`：环形链表
+- `src/User.java`：用户实体类
+- `src/Order.java`：订单实体类
+- `src/Task.java`：任务实体类
+- `src/Day3OopDemo.java`：面向对象练习入口
+- `leetcode/java/ReverseList.java`：反转链表
+- `leetcode/java/LinkedListCycle.java`：环形链表
 
 ### 今日复盘
 - 类是对象的模板，对象是类创建出来的具体实例
@@ -87,10 +93,10 @@
 - 实现命令行 TodoList v0.1 的添加、删除、查询
 
 ### 代码文件
-- `Day4CollectionsDemo.java`：集合基础练习
-- `GroupAnagrams.java`：字母异位词分组
-- `LongestConsecutive.java`：最长连续序列
-- `TodoListApp.java`：命令行 TodoList v0.1
+- `src/Day4CollectionsDemo.java`：集合基础练习
+- `leetcode/java/GroupAnagrams.java`：字母异位词分组
+- `leetcode/java/LongestConsecutive.java`：最长连续序列
+- `src/TodoListApp.java`：命令行 TodoList v0.1
 
 ### 今日复盘
 - `ArrayList` 底层是动态数组，适合按下标快速访问
@@ -113,13 +119,13 @@
 - 完成 Valid Anagram
 
 ### 代码文件
-- `Day5ExceptionDemo.java`：异常处理练习
-- `InvalidTaskException.java`：自定义任务异常
-- `Day5GenericDemo.java`：泛型方法练习
-- `Day5FileDemo.java`：简单文件读写练习
-- `TodoListFileApp.java`：TodoList v0.2 文件持久化
-- `LongestSubstringWithoutRepeating.java`：最长无重复子串
-- `ValidAnagram.java`：有效的字母异位词
+- `src/Day5ExceptionDemo.java`：异常处理练习
+- `src/InvalidTaskException.java`：自定义任务异常
+- `src/Day5GenericDemo.java`：泛型方法练习
+- `src/Day5FileDemo.java`：简单文件读写练习
+- `src/TodoListFileApp.java`：TodoList v0.2 文件持久化
+- `leetcode/java/LongestSubstringWithoutRepeating.java`：最长无重复子串
+- `leetcode/java/ValidAnagram.java`：有效的字母异位词
 
 ### 今日复盘
 - `try/catch` 可以捕获异常，避免程序直接崩溃
@@ -129,4 +135,3 @@
 - `String` 不可变，滑动窗口中用 `HashSet<Character>` 维护当前窗口字符
 - 文件持久化就是把内存中的任务写入文件，下次再从文件读回
 - Valid Anagram 可以通过排序后比较两个字符数组解决
-
