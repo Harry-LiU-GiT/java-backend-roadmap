@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Iterator;
 
 public class Day4CollectionsDemo {
     public static void main(String[] args){
@@ -31,5 +32,10 @@ public class Day4CollectionsDemo {
         System.out.println(queue.getFirst());
         queue.removeFirst();
         System.out.println(queue);
+        Iterator<String> iterator = tasks.iterator();
+        while (iterator.hasNext()){
+            String task = iterator.next();
+            System.out.println(task);
+        }
     }
 }

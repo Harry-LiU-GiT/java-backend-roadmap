@@ -1,7 +1,11 @@
-public class User {
+public class User implements Printable {
     private int id;
     private String username;
     private int age;
+
+    public void printInfo(){
+        System.out.println(id + " " + username + " " + age);
+    }
 
     public User(int id, String username, int age){
         this.id = id;

@@ -21,5 +21,15 @@ public class Day3OopDemo {
         task1.setPriority(1);
         System.out.println(task1.isCompleted());
         System.out.println(task1.getPriority());
+        FileInfo fileinfo = new FileInfo(1, "user.csv", "csv", 1024);
+        fileinfo.setSize(2048);
+        System.out.println(fileinfo.getSize());
+        fileinfo.printInfo();
+        printAny(man);
+        printAny(fileinfo);
+    }
+
+    public static void printAny(Printable item){
+        item.printInfo();
     }
 }
