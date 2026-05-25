@@ -7,6 +7,17 @@
 - `leetcode/java/`：Java 算法题解
 - `project-notes/`：求职目标、简历草稿和项目笔记
 
+## Weekly Progress
+
+### Week 1
+- Completed Java basics: variables, control flow, arrays, strings, methods
+- Practiced OOP: classes, constructors, encapsulation, interfaces
+- Practiced collections: `ArrayList`, `LinkedList`, `HashMap`, `HashSet`, `Iterator`
+- Practiced exceptions, generics, file IO, and `try-with-resources`
+- Set up Maven, SLF4J logging, and JUnit testing
+- Built small demos: TodoList, CSV preview, file record manager
+- Solved and reviewed core algorithm patterns: hash map, stack, linked list, sliding window, two pointers
+
 ## Day 1 - 环境与 Java 基础
 
 ### 今日完成
