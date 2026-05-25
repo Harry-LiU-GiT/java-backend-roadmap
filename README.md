@@ -2,7 +2,8 @@
 
 ## Repository Structure
 
-- `src/`：Java 基础语法、工具类、实体类和小项目练习
+- `src/main/java/`：Java 基础语法、工具类、实体类、小项目和 Maven 正式代码
+- `src/test/java/`：Maven 单元测试
 - `leetcode/java/`：Java 算法题解
 - `project-notes/`：求职目标、简历草稿和项目笔记
 
@@ -17,7 +18,7 @@
 - 完成 Valid Parentheses 栈解法
 
 ### 代码文件
-- `src/Main.java`：Java 基础语法练习
+- `src/main/java/Main.java`：Java 基础语法练习
 - `leetcode/java/TwoSum.java`：两数之和
 - `leetcode/java/ValidParentheses.java`：有效的括号
 
@@ -39,9 +40,9 @@
 - 复盘 HashMap 解 Two Sum 的思路
 
 ### 代码文件
-- `src/Day2Basics.java`：数组、字符串和 `StringBuilder` 基础练习
-- `src/ArrayUtils.java`：数组工具方法
-- `src/StringUtils.java`：字符串工具方法
+- `src/main/java/Day2Basics.java`：数组、字符串和 `StringBuilder` 基础练习
+- `src/main/java/ArrayUtils.java`：数组工具方法
+- `src/main/java/StringUtils.java`：字符串工具方法
 - `leetcode/java/MoveZeroes.java`：移动零
 - `leetcode/java/MergeTwoLists.java`：合并两个有序链表
 
@@ -64,10 +65,10 @@
 - 完成 Linked List Cycle
 
 ### 代码文件
-- `src/User.java`：用户实体类
-- `src/Order.java`：订单实体类
-- `src/Task.java`：任务实体类
-- `src/Day3OopDemo.java`：面向对象练习入口
+- `src/main/java/User.java`：用户实体类
+- `src/main/java/Order.java`：订单实体类
+- `src/main/java/Task.java`：任务实体类
+- `src/main/java/Day3OopDemo.java`：面向对象练习入口
 - `leetcode/java/ReverseList.java`：反转链表
 - `leetcode/java/LinkedListCycle.java`：环形链表
 
@@ -93,10 +94,10 @@
 - 实现命令行 TodoList v0.1 的添加、删除、查询
 
 ### 代码文件
-- `src/Day4CollectionsDemo.java`：集合基础练习
+- `src/main/java/Day4CollectionsDemo.java`：集合基础练习
 - `leetcode/java/GroupAnagrams.java`：字母异位词分组
 - `leetcode/java/LongestConsecutive.java`：最长连续序列
-- `src/TodoListApp.java`：命令行 TodoList v0.1
+- `src/main/java/TodoListApp.java`：命令行 TodoList v0.1
 
 ### 今日复盘
 - `ArrayList` 底层是动态数组，适合按下标快速访问
@@ -119,11 +120,11 @@
 - 完成 Valid Anagram
 
 ### 代码文件
-- `src/Day5ExceptionDemo.java`：异常处理练习
-- `src/InvalidTaskException.java`：自定义任务异常
-- `src/Day5GenericDemo.java`：泛型方法练习
-- `src/Day5FileDemo.java`：简单文件读写练习
-- `src/TodoListFileApp.java`：TodoList v0.2 文件持久化
+- `src/main/java/Day5ExceptionDemo.java`：异常处理练习
+- `src/main/java/InvalidTaskException.java`：自定义任务异常
+- `src/main/java/Day5GenericDemo.java`：泛型方法练习
+- `src/main/java/Day5FileDemo.java`：简单文件读写练习
+- `src/main/java/TodoListFileApp.java`：TodoList v0.2 文件持久化
 - `leetcode/java/LongestSubstringWithoutRepeating.java`：最长无重复子串
 - `leetcode/java/ValidAnagram.java`：有效的字母异位词
 
@@ -135,3 +136,35 @@
 - `String` 不可变，滑动窗口中用 `HashSet<Character>` 维护当前窗口字符
 - 文件持久化就是把内存中的任务写入文件，下次再从文件读回
 - Valid Anagram 可以通过排序后比较两个字符数组解决
+
+## Day 6 - Java 小综合、Maven 与测试
+
+### 今日完成
+- 安装并验证 Maven
+- 创建 `pom.xml`，配置 Java 17 编译
+- 添加 SLF4J 日志依赖并完成 `LoggingDemo`
+- 添加 JUnit 5，完成 `ArrayUtilsForTest` 单元测试
+- 将项目代码整理到 Maven 标准目录 `src/main/java` 和 `src/test/java`
+- 完成 Maximum Subarray
+- 完成 Best Time to Buy and Sell Stock
+- 实现命令行版文件上传记录管理小程序
+
+### 代码文件
+- `pom.xml`：Maven 项目配置
+- `src/main/java/LoggingDemo.java`：日志练习
+- `src/main/java/ArrayUtilsForTest.java`：单元测试练习工具类
+- `src/test/java/ArrayUtilsForTestTest.java`：JUnit 测试
+- `leetcode/java/MaxSubArray.java`：最大子数组和
+- `leetcode/java/BestTimeToBuySellStock.java`：买卖股票最佳时机
+- `src/main/java/FileRecord.java`：文件记录实体类
+- `src/main/java/FileRecordManager.java`：文件记录管理器
+- `src/main/java/FileRecordApp.java`：命令行演示入口
+
+### 今日复盘
+- Maven 通过 `pom.xml` 管理依赖、编译、测试和构建流程
+- `src/main/java` 放正式代码，`src/test/java` 放测试代码
+- 日志比 `System.out.println` 更适合后端项目，可区分 `info`、`warn`、`error`
+- JUnit 用断言自动判断结果是否正确，适合替代手动看输出
+- Maximum Subarray 使用 `currentSum` 和 `maxSum` 动态维护最优结果
+- 股票题使用 `minPrice` 和 `maxProfit` 一次遍历求解
+- 文件记录管理器用 `ArrayList<FileRecord>` 保存多条记录，并封装添加、查询、删除逻辑
